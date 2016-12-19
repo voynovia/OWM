@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9D0F6E0DEB6DCAF39E38D58 /* Pods_OWM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF330B4753E851B4539EC955 /* Pods_OWM.framework */; };
+		F789ECD01DFD4333004A77E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */; };
+		F789ECD21DFD4333004A77E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECD11DFD4333004A77E2 /* DetailViewController.swift */; };
+		F789ECD51DFD4333004A77E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F789ECD31DFD4333004A77E2 /* Main.storyboard */; };
+		F789ECD71DFD4333004A77E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F789ECD61DFD4333004A77E2 /* Assets.xcassets */; };
+		F789ECDA1DFD4333004A77E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F789ECD81DFD4333004A77E2 /* LaunchScreen.storyboard */; };
+		F789ECE31DFD449A004A77E2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F789ECE21DFD449A004A77E2 /* .swiftlint.yml */; };
+		F789ECE81DFD4822004A77E2 /* OpenWeatherMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECE71DFD4822004A77E2 /* OpenWeatherMap.swift */; };
+		F789ECF41DFD503C004A77E2 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECF31DFD503C004A77E2 /* LocationData.swift */; };
+		F789ECF81DFE9789004A77E2 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECF71DFE9789004A77E2 /* ForecastData.swift */; };
+		F789ECFA1DFEB390004A77E2 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECF91DFEB390004A77E2 /* CurrentData.swift */; };
+		F789ECFC1DFEB68D004A77E2 /* ForecastDailyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECFB1DFEB68D004A77E2 /* ForecastDailyData.swift */; };
+		F789ED041DFEDD59004A77E2 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ED031DFEDD59004A77E2 /* Structs.swift */; };
+		F7BE95581E02774F00EF596F /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE95571E02774F00EF596F /* CityViewModel.swift */; };
+		F7BE955C1E02C4A500EF596F /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE955B1E02C4A500EF596F /* Control.swift */; };
+		F7BE955F1E031EAE00EF596F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE955E1E031EAE00EF596F /* Enums.swift */; };
+		F7BE95611E031EE100EF596F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE95601E031EE100EF596F /* Extensions.swift */; };
+		F7BF1AB01E01420500F35650 /* CurrentLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AAF1E01420500F35650 /* CurrentLine.swift */; };
+		F7BF1AB21E01420C00F35650 /* Hourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AB11E01420C00F35650 /* Hourly.swift */; };
+		F7BF1AB41E01421300F35650 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AB31E01421300F35650 /* Days.swift */; };
+		F7BF1ABA1E015AF100F35650 /* DetailViewController+OWM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AB91E015AF100F35650 /* DetailViewController+OWM.swift */; };
+		F7BF1AC31E016CCF00F35650 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AC21E016CCF00F35650 /* LocationViewController.swift */; };
+		F7BF1AC71E017A8300F35650 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AC61E017A8300F35650 /* LocationCell.swift */; };
+		F7BF1ACD1E01BF2200F35650 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1ACC1E01BF2200F35650 /* SearchViewController.swift */; };
+		F7BF1AD51E01C71000F35650 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1AD41E01C71000F35650 /* SearchCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		51FAA8C957B97DABC2B0E0D7 /* Pods-OWM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWM.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWM/Pods-OWM.release.xcconfig"; sourceTree = "<group>"; };
+		DF330B4753E851B4539EC955 /* Pods_OWM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OWM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E677FBB8AC708990B74F4F /* Pods-OWM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OWM/Pods-OWM.debug.xcconfig"; sourceTree = "<group>"; };
+		F789ECCC1DFD4333004A77E2 /* OWM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F789ECD11DFD4333004A77E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F789ECD41DFD4333004A77E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F789ECD61DFD4333004A77E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F789ECD91DFD4333004A77E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F789ECDB1DFD4333004A77E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F789ECE21DFD449A004A77E2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		F789ECE71DFD4822004A77E2 /* OpenWeatherMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMap.swift; sourceTree = "<group>"; };
+		F789ECF31DFD503C004A77E2 /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		F789ECF71DFE9789004A77E2 /* ForecastData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
+		F789ECF91DFEB390004A77E2 /* CurrentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
+		F789ECFB1DFEB68D004A77E2 /* ForecastDailyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastDailyData.swift; sourceTree = "<group>"; };
+		F789ED031DFEDD59004A77E2 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		F7BE95571E02774F00EF596F /* CityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		F7BE955B1E02C4A500EF596F /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		F7BE955E1E031EAE00EF596F /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F7BE95601E031EE100EF596F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F7BF1AAF1E01420500F35650 /* CurrentLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLine.swift; sourceTree = "<group>"; };
+		F7BF1AB11E01420C00F35650 /* Hourly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hourly.swift; sourceTree = "<group>"; };
+		F7BF1AB31E01421300F35650 /* Days.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		F7BF1AB91E015AF100F35650 /* DetailViewController+OWM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailViewController+OWM.swift"; sourceTree = "<group>"; };
+		F7BF1AC21E016CCF00F35650 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		F7BF1AC61E017A8300F35650 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		F7BF1ACC1E01BF2200F35650 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F7BF1AD41E01C71000F35650 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F789ECC91DFD4333004A77E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D0F6E0DEB6DCAF39E38D58 /* Pods_OWM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1364422F3E207743B2951E7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1E677FBB8AC708990B74F4F /* Pods-OWM.debug.xcconfig */,
+				51FAA8C957B97DABC2B0E0D7 /* Pods-OWM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D1445324C4959115D4509EF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF330B4753E851B4539EC955 /* Pods_OWM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F789ECC31DFD4333004A77E2 = {
+			isa = PBXGroup;
+			children = (
+				F789ECE21DFD449A004A77E2 /* .swiftlint.yml */,
+				F789ECCE1DFD4333004A77E2 /* OWM */,
+				F789ECCD1DFD4333004A77E2 /* Products */,
+				1364422F3E207743B2951E7E /* Pods */,
+				D1445324C4959115D4509EF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F789ECCD1DFD4333004A77E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F789ECCC1DFD4333004A77E2 /* OWM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F789ECCE1DFD4333004A77E2 /* OWM */ = {
+			isa = PBXGroup;
+			children = (
+				F7BE955D1E031EA000EF596F /* Helpers */,
+				F789ECE11DFD4342004A77E2 /* Supporting Files */,
+				F789ECEB1DFD494E004A77E2 /* Model */,
+				F789ED091DFF019A004A77E2 /* Views */,
+				F7BF1ACE1E01BFE500F35650 /* Controllers */,
+				F789ECD31DFD4333004A77E2 /* Main.storyboard */,
+			);
+			path = OWM;
+			sourceTree = "<group>";
+		};
+		F789ECE11DFD4342004A77E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */,
+				F789ECD61DFD4333004A77E2 /* Assets.xcassets */,
+				F789ECD81DFD4333004A77E2 /* LaunchScreen.storyboard */,
+				F789ECDB1DFD4333004A77E2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F789ECEB1DFD494E004A77E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F789ECEE1DFD4F32004A77E2 /* Provider */,
+				F789ECED1DFD4F24004A77E2 /* Data */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F789ECED1DFD4F24004A77E2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F789ECF31DFD503C004A77E2 /* LocationData.swift */,
+				F789ECF91DFEB390004A77E2 /* CurrentData.swift */,
+				F789ECF71DFE9789004A77E2 /* ForecastData.swift */,
+				F789ECFB1DFEB68D004A77E2 /* ForecastDailyData.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		F789ECEE1DFD4F32004A77E2 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				F789ECE71DFD4822004A77E2 /* OpenWeatherMap.swift */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
+		F789ED091DFF019A004A77E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF1AAF1E01420500F35650 /* CurrentLine.swift */,
+				F7BF1AB11E01420C00F35650 /* Hourly.swift */,
+				F7BF1AB31E01421300F35650 /* Days.swift */,
+				F7BE955B1E02C4A500EF596F /* Control.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F7BE955D1E031EA000EF596F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F7BE955E1E031EAE00EF596F /* Enums.swift */,
+				F7BE95601E031EE100EF596F /* Extensions.swift */,
+				F789ED031DFEDD59004A77E2 /* Structs.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F7BF1ACE1E01BFE500F35650 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF1ACF1E01BFF900F35650 /* Detail */,
+				F7BF1AD01E01C00100F35650 /* Location */,
+				F7BF1AD11E01C00900F35650 /* Search */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F7BF1ACF1E01BFF900F35650 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F789ECD11DFD4333004A77E2 /* DetailViewController.swift */,
+				F7BF1AB91E015AF100F35650 /* DetailViewController+OWM.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		F7BF1AD01E01C00100F35650 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF1AC21E016CCF00F35650 /* LocationViewController.swift */,
+				F7BE95571E02774F00EF596F /* CityViewModel.swift */,
+				F7BF1AC61E017A8300F35650 /* LocationCell.swift */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		F7BF1AD11E01C00900F35650 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF1ACC1E01BF2200F35650 /* SearchViewController.swift */,
+				F7BF1AD41E01C71000F35650 /* SearchCell.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F789ECCB1DFD4333004A77E2 /* OWM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F789ECDE1DFD4333004A77E2 /* Build configuration list for PBXNativeTarget "OWM" */;
+			buildPhases = (
+				7960A788BE3C0182CE9976C2 /* [CP] Check Pods Manifest.lock */,
+				CDFEB653B2C35A9BBEB1B2B6 /* [CP] Check Pods Manifest.lock */,
+				F789ECC81DFD4333004A77E2 /* Sources */,
+				F789ECC91DFD4333004A77E2 /* Frameworks */,
+				F789ECCA1DFD4333004A77E2 /* Resources */,
+				32DC065DB05A43F4423BB7EA /* [CP] Embed Pods Frameworks */,
+				F458D13D59F276187247BA32 /* [CP] Copy Pods Resources */,
+				F789ECE41DFD44D3004A77E2 /* ShellScript */,
+				D773F659750799E1ECD04305 /* 📦 Embed Pods Frameworks */,
+				AD110B0BEF38E51FFF9D7CC8 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OWM;
+			productName = OWM;
+			productReference = F789ECCC1DFD4333004A77E2 /* OWM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F789ECC41DFD4333004A77E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Igor Voynov";
+				TargetAttributes = {
+					F789ECCB1DFD4333004A77E2 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = URPAD7DNKD;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F789ECC71DFD4333004A77E2 /* Build configuration list for PBXProject "OWM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F789ECC31DFD4333004A77E2;
+			productRefGroup = F789ECCD1DFD4333004A77E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F789ECCB1DFD4333004A77E2 /* OWM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F789ECCA1DFD4333004A77E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F789ECE31DFD449A004A77E2 /* .swiftlint.yml in Resources */,
+				F789ECDA1DFD4333004A77E2 /* LaunchScreen.storyboard in Resources */,
+				F789ECD71DFD4333004A77E2 /* Assets.xcassets in Resources */,
+				F789ECD51DFD4333004A77E2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32DC065DB05A43F4423BB7EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWM/Pods-OWM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7960A788BE3C0182CE9976C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD110B0BEF38E51FFF9D7CC8 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWM/Pods-OWM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDFEB653B2C35A9BBEB1B2B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D773F659750799E1ECD04305 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWM/Pods-OWM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F458D13D59F276187247BA32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWM/Pods-OWM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F789ECE41DFD44D3004A77E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\necho \"swiftlint autocorrect\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F789ECC81DFD4333004A77E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7BF1AD51E01C71000F35650 /* SearchCell.swift in Sources */,
+				F789ECD21DFD4333004A77E2 /* DetailViewController.swift in Sources */,
+				F7BE955F1E031EAE00EF596F /* Enums.swift in Sources */,
+				F789ECF81DFE9789004A77E2 /* ForecastData.swift in Sources */,
+				F789ECFA1DFEB390004A77E2 /* CurrentData.swift in Sources */,
+				F7BF1ACD1E01BF2200F35650 /* SearchViewController.swift in Sources */,
+				F7BF1AB01E01420500F35650 /* CurrentLine.swift in Sources */,
+				F7BF1ABA1E015AF100F35650 /* DetailViewController+OWM.swift in Sources */,
+				F789ED041DFEDD59004A77E2 /* Structs.swift in Sources */,
+				F7BF1AB21E01420C00F35650 /* Hourly.swift in Sources */,
+				F7BF1AB41E01421300F35650 /* Days.swift in Sources */,
+				F789ECFC1DFEB68D004A77E2 /* ForecastDailyData.swift in Sources */,
+				F789ECD01DFD4333004A77E2 /* AppDelegate.swift in Sources */,
+				F7BE95611E031EE100EF596F /* Extensions.swift in Sources */,
+				F7BF1AC31E016CCF00F35650 /* LocationViewController.swift in Sources */,
+				F789ECE81DFD4822004A77E2 /* OpenWeatherMap.swift in Sources */,
+				F7BF1AC71E017A8300F35650 /* LocationCell.swift in Sources */,
+				F7BE955C1E02C4A500EF596F /* Control.swift in Sources */,
+				F789ECF41DFD503C004A77E2 /* LocationData.swift in Sources */,
+				F7BE95581E02774F00EF596F /* CityViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F789ECD31DFD4333004A77E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F789ECD41DFD4333004A77E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F789ECD81DFD4333004A77E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F789ECD91DFD4333004A77E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F789ECDC1DFD4333004A77E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F789ECDD1DFD4333004A77E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F789ECDF1DFD4333004A77E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E677FBB8AC708990B74F4F /* Pods-OWM.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = URPAD7DNKD;
+				INFOPLIST_FILE = OWM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.voynov.OWM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		F789ECE01DFD4333004A77E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51FAA8C957B97DABC2B0E0D7 /* Pods-OWM.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = URPAD7DNKD;
+				INFOPLIST_FILE = OWM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.voynov.OWM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F789ECC71DFD4333004A77E2 /* Build configuration list for PBXProject "OWM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F789ECDC1DFD4333004A77E2 /* Debug */,
+				F789ECDD1DFD4333004A77E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F789ECDE1DFD4333004A77E2 /* Build configuration list for PBXNativeTarget "OWM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F789ECDF1DFD4333004A77E2 /* Debug */,
+				F789ECE01DFD4333004A77E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F789ECC41DFD4333004A77E2 /* Project object */;
+}

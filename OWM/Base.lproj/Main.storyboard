@@ -10,35 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="OWM" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="EZc-8U-zcP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="EZc-8U-zcP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Eu1-4C-bcb"/>
-                            <constraint firstAttribute="trailing" secondItem="EZc-8U-zcP" secondAttribute="trailing" id="d0y-6I-JRb"/>
-                            <constraint firstItem="EZc-8U-zcP" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gd1-0K-LAn"/>
-                            <constraint firstItem="EZc-8U-zcP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ujs-dr-2Vf"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1345" y="-671"/>
-        </scene>
         <!--Search View Controller-->
         <scene sceneID="5zn-rg-z39">
             <objects>
@@ -53,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iWL-Bd-sj5" id="kMl-Ht-quA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-SL-i2Z">
@@ -121,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="48" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W0I-T5-Rzh" id="jYo-lp-PRk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="al6-j0-wNk">
@@ -179,9 +150,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Old" id="qCP-Vy-QID"/>
                         <segue destination="pIZ-CQ-lEA" kind="showDetail" identifier="Search" action="showViewController:sender:" id="O0c-SR-Un6"/>
-                        <segue destination="GDr-99-3Wj" kind="showDetail" identifier="Detail" id="U6I-jQ-fs5"/>
+                        <segue destination="GDr-99-3Wj" kind="show" identifier="Detail" action="showDetailViewController:sender:" id="U6I-jQ-fs5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2a-Tu-IfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,7 +179,7 @@
         <!--Details View Controller-->
         <scene sceneID="Dai-6K-xmA">
             <objects>
-                <viewController id="GDr-99-3Wj" customClass="DetailsViewController" customModule="OWM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsVC" id="GDr-99-3Wj" customClass="DetailsViewController" customModule="OWM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rly-BF-2sZ"/>
                         <viewControllerLayoutGuide type="bottom" id="v4m-P3-jJM"/>
@@ -251,11 +221,12 @@
                         <outlet property="containerView" destination="FyU-PX-EBg" id="2Xe-hY-l1r"/>
                         <outlet property="footer" destination="QGy-QN-xgv" id="KRF-MJ-oYI"/>
                         <outlet property="pageControl" destination="quh-Iw-pWT" id="8s6-OV-eem"/>
+                        <segue destination="1c0-sw-Uma" kind="show" identifier="List" id="Zbu-ht-mad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5P-Te-l1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.800000000000001" y="-423.23838080959524"/>
+            <point key="canvasLocation" x="-122" y="-425"/>
         </scene>
         <!--Details Page View Controller-->
         <scene sceneID="3xP-m9-KVD">
@@ -263,10 +234,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="yxi-Vt-aUa" customClass="DetailsPageViewController" customModule="OWM" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiM-At-90i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="-424"/>
+            <point key="canvasLocation" x="817" y="-425"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="backgroundImage" width="763" height="1356"/>
-    </resources>
 </document>

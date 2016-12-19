@@ -20,6 +20,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
         print("Realm Path : \(Realm.Configuration.defaultConfiguration.fileURL!.absoluteURL)")
         
+        let realm = try! Realm()
+        let objects = realm.objects(CurrentData.self)
+        if objects.count > 0 {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsViewController
+            
+            if let id = Plist(name: "Settings")?.getValuesInPlistFile()?["lastCity"] as? Int,
+                realm.objects(CurrentData.self).filter("idWeather == \(id)").first != nil {
+                    initialViewController.idLocation = id
+            } else {
+                initialViewController.idLocation = objects.first?.idWeather
+            }
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+                
         return true
     }
 

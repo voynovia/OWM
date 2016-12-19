@@ -11,6 +11,7 @@
 		F70FC3A31E07E8A7000CED37 /* DetailsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FC3A21E07E8A7000CED37 /* DetailsPageViewController.swift */; };
 		F70FC3A51E081B2C000CED37 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FC3A41E081B2C000CED37 /* DetailsViewController.swift */; };
 		F70FC3A71E0823B6000CED37 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FC3A61E0823B6000CED37 /* Footer.swift */; };
+		F70FC3A91E0838AF000CED37 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70FC3A81E0838AF000CED37 /* Settings.plist */; };
 		F789ECD01DFD4333004A77E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */; };
 		F789ECD21DFD4333004A77E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECD11DFD4333004A77E2 /* DetailViewController.swift */; };
 		F789ECD51DFD4333004A77E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F789ECD31DFD4333004A77E2 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		F70FC3A21E07E8A7000CED37 /* DetailsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsPageViewController.swift; sourceTree = "<group>"; };
 		F70FC3A41E081B2C000CED37 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F70FC3A61E0823B6000CED37 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		F70FC3A81E0838AF000CED37 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		F789ECCC1DFD4333004A77E2 /* OWM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F789ECD11DFD4333004A77E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				F789ECD61DFD4333004A77E2 /* Assets.xcassets */,
 				F789ECD81DFD4333004A77E2 /* LaunchScreen.storyboard */,
 				F789ECDB1DFD4333004A77E2 /* Info.plist */,
+				F70FC3A81E0838AF000CED37 /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				F789ECDA1DFD4333004A77E2 /* LaunchScreen.storyboard in Resources */,
 				F789ECD71DFD4333004A77E2 /* Assets.xcassets in Resources */,
 				F789ECD51DFD4333004A77E2 /* Main.storyboard in Resources */,
+				F70FC3A91E0838AF000CED37 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

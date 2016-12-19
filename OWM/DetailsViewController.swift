@@ -53,6 +53,10 @@ class DetailsViewController: UIViewController {
             self.detailsPageViewController = detailsPageViewController
             detailsPageViewController.idLocation = idLocation
         }
+        
+        if let locationViewController = segue.destination as? LocationViewController {
+            locationViewController.idLocation = idLocation
+        }
     }
     
     func didChangePageControlValue() {
@@ -60,7 +64,11 @@ class DetailsViewController: UIViewController {
     }
     
     func backButtonAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "List", sender: sender)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 }

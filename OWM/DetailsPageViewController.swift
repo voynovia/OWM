@@ -23,6 +23,16 @@ class DetailsPageViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
+        if let plist = Plist(name: "Settings") {
+            let dict = plist.getMutablePlistFile()!
+            dict["lastCity"] = idLocation
+            do {
+                try plist.addValuesToPlistFile(dict)
+            } catch {
+                print(error)
+            }
+        }
+        
         let realm = try! Realm()
         for current in realm.objects(CurrentData.self) {
             let detailVC = DetailViewController()

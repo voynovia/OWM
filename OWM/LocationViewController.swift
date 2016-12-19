@@ -103,7 +103,7 @@ class LocationViewController: UITableViewController {
             searchvc.searchDelegate = self
         }
         
-        if let detailvc = destinationvc as? DetailViewController, segue.identifier == Storyboard.Detail {
+        if let detailvc = destinationvc as? DetailsViewController, segue.identifier == Storyboard.Detail {
             detailvc.idLocation = self.idLocation
         }
         

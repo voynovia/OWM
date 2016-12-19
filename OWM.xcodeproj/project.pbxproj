@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D9D0F6E0DEB6DCAF39E38D58 /* Pods_OWM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF330B4753E851B4539EC955 /* Pods_OWM.framework */; };
+		F70FC3A31E07E8A7000CED37 /* DetailsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FC3A21E07E8A7000CED37 /* DetailsPageViewController.swift */; };
+		F70FC3A51E081B2C000CED37 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FC3A41E081B2C000CED37 /* DetailsViewController.swift */; };
+		F70FC3A71E0823B6000CED37 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FC3A61E0823B6000CED37 /* Footer.swift */; };
 		F789ECD01DFD4333004A77E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */; };
 		F789ECD21DFD4333004A77E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789ECD11DFD4333004A77E2 /* DetailViewController.swift */; };
 		F789ECD51DFD4333004A77E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F789ECD31DFD4333004A77E2 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 		51FAA8C957B97DABC2B0E0D7 /* Pods-OWM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWM.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWM/Pods-OWM.release.xcconfig"; sourceTree = "<group>"; };
 		DF330B4753E851B4539EC955 /* Pods_OWM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OWM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E677FBB8AC708990B74F4F /* Pods-OWM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OWM/Pods-OWM.debug.xcconfig"; sourceTree = "<group>"; };
+		F70FC3A21E07E8A7000CED37 /* DetailsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsPageViewController.swift; sourceTree = "<group>"; };
+		F70FC3A41E081B2C000CED37 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F70FC3A61E0823B6000CED37 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		F789ECCC1DFD4333004A77E2 /* OWM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F789ECCF1DFD4333004A77E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F789ECD11DFD4333004A77E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,15 @@
 				DF330B4753E851B4539EC955 /* Pods_OWM.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F70FC3A11E07E881000CED37 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F70FC3A41E081B2C000CED37 /* DetailsViewController.swift */,
+				F70FC3A21E07E8A7000CED37 /* DetailsPageViewController.swift */,
+			);
+			name = Page;
 			sourceTree = "<group>";
 		};
 		F789ECC31DFD4333004A77E2 = {
@@ -173,6 +188,7 @@
 				F7BF1AB11E01420C00F35650 /* Hourly.swift */,
 				F7BF1AB31E01421300F35650 /* Days.swift */,
 				F7BE955B1E02C4A500EF596F /* Control.swift */,
+				F70FC3A61E0823B6000CED37 /* Footer.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -190,6 +206,7 @@
 		F7BF1ACE1E01BFE500F35650 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F70FC3A11E07E881000CED37 /* Page */,
 				F7BF1ACF1E01BFF900F35650 /* Detail */,
 				F7BF1AD01E01C00100F35650 /* Location */,
 				F7BF1AD11E01C00900F35650 /* Search */,
@@ -416,6 +433,7 @@
 				F7BF1AD51E01C71000F35650 /* SearchCell.swift in Sources */,
 				F789ECD21DFD4333004A77E2 /* DetailViewController.swift in Sources */,
 				F7BE955F1E031EAE00EF596F /* Enums.swift in Sources */,
+				F70FC3A51E081B2C000CED37 /* DetailsViewController.swift in Sources */,
 				F789ECF81DFE9789004A77E2 /* ForecastData.swift in Sources */,
 				F789ECFA1DFEB390004A77E2 /* CurrentData.swift in Sources */,
 				F7BF1ACD1E01BF2200F35650 /* SearchViewController.swift in Sources */,
@@ -428,7 +446,9 @@
 				F789ECD01DFD4333004A77E2 /* AppDelegate.swift in Sources */,
 				F7BE95611E031EE100EF596F /* Extensions.swift in Sources */,
 				F7BF1AC31E016CCF00F35650 /* LocationViewController.swift in Sources */,
+				F70FC3A31E07E8A7000CED37 /* DetailsPageViewController.swift in Sources */,
 				F789ECE81DFD4822004A77E2 /* OpenWeatherMap.swift in Sources */,
+				F70FC3A71E0823B6000CED37 /* Footer.swift in Sources */,
 				F7BF1AC71E017A8300F35650 /* LocationCell.swift in Sources */,
 				F7BE955C1E02C4A500EF596F /* Control.swift in Sources */,
 				F789ECF41DFD503C004A77E2 /* LocationData.swift in Sources */,

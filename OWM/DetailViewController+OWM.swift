@@ -159,9 +159,6 @@ extension DetailViewController: OpenWeatherMapDelegate {
                 i+=1
             }
             
-            print(days.bounds)
-            print(days.frame)
-            
         }
     }
     

@@ -51,6 +51,12 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         weather.delegate = self
         
+        let bgImage = UIImageView(image: #imageLiteral(resourceName: "backgroundImage"))
+        bgImage.frame = self.view.bounds
+        bgImage.contentMode = UIViewContentMode.scaleAspectFit
+        self.view.addSubview(bgImage)
+        self.view.backgroundColor = UIColor.clear
+        
         setUIProgramaticaly()
         
         if let id = idLocation {
@@ -106,33 +112,10 @@ class DetailViewController: UIViewController {
         foreground.addSubview(currentView)
         heightForeground+=currentView.frame.height
         
-        let bottomOffset = halfPartHeight + quarterPartHeight
-        foreground.contentSize = CGSize(width: view.bounds.width, height: heightForeground + bottomOffset)
+        foreground.contentSize = CGSize(width: view.bounds.width, height: heightForeground+quarterPartHeight)
 
         view.addSubview(foreground)
         foreground.delegate = self
-        
-        // Подвал
-        // ------------------------------------------------------------------
-        let footer = UIView(frame: CGRect(x: 0, y: view.bounds.height-halfPartHeight, width: view.bounds.width, height: halfPartHeight))
-        
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "footerImage"))
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = imageView.bounds
-        imageView.addSubview(blurView)
-        imageView.contentMode = .scaleToFill
-        footer.addSubview(imageView)
-        
-        let xOffset = footer.bounds.width / 16
-        let citiesButton = UIButton(frame: CGRect(x: footer.bounds.width-xOffset*2, y: 0, width: xOffset, height: footer.bounds.height))
-        citiesButton.setTitle("⇋", for: .normal)
-        citiesButton.titleLabel?.font  = UIFont.systemFont(ofSize: 24, weight: UIFontWeightLight)
-        citiesButton.setTitleColor(UIColor.white, for: .normal)
-        footer.addSubview(citiesButton)
-        citiesButton.addTarget(self, action: #selector(self.citiesButtonAction(_:)), for: .touchUpInside)
-        
-        view.addSubview(footer)
         
     }
     
@@ -140,9 +123,6 @@ class DetailViewController: UIViewController {
         return .lightContent
     }
     
-    func citiesButtonAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 extension DetailViewController: UIScrollViewDelegate {
